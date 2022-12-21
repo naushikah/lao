@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Global, NavbarStyled as Navbar, FooterStyled as FooterStyled } from "./global.css";
+import { Global, NavbarStyled as Navbar } from "./global.css";
 import Home from "./pages/Home";
 import PageTwo from "./pages/PageTwo";
 
