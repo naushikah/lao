@@ -14,6 +14,9 @@ export const NavbarStyled = styled(Navbar)`
 `;
 
 export const FooterStyled = styled.footer`
-  height: 4rem;
+  height: 64px;
+  width: 100%;
   background-color: #f0f0f0;
+  position: fixed;
+  bottom: 0;
 `;

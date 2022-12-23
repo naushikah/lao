@@ -70,9 +70,19 @@ export const ImageStyled = styled(Image)`
 `;
 
 export const MenuContainer = styled.div`
-  h2 {
-    font-weight: 200;
+  gap: 1rem;
+
+  a {
+    font-size: 20px;
     letter-spacing: 1px;
+    text-decoration: none;
+    color: #000000;
+
+    @media (min-width: 992px) {
+      span {
+        color: #ffffff;
+      }
+    }
   }
 
   @media (min-width: 576px) and (max-width: 991px) {
@@ -80,10 +90,40 @@ export const MenuContainer = styled.div`
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
-    gap: 8rem;
+    gap: 9rem;
   }
 
   @media (min-width: 1200px) {
-    gap: 10rem;
+    gap: 11rem;
+  }
+`;
+
+export const DevNameContainer = styled.div`
+  h3 {
+    font-size: 20px;
+    position: absolute;
+    bottom: 101px;
+    @media (min-width: 992px) {
+      right: 101px;
+    }
+  }
+`;
+
+export const Division = styled.hr`
+  background-color: #000000;
+  height: 1px;
+  border: 0;
+  opacity: 1;
+  width: 100%;
+
+  &::after {
+    width: 25.1%;
+    height: 1px;
+    content: '';
+    border: 1px solid #ffffff;
+
+    @media (min-width: 1400px) {
+      width: 33.35%;
+    }
   }
 `;

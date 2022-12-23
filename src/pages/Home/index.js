@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   BackgroundDark,
   WelcomeContainer,
@@ -8,6 +8,8 @@ import {
   ImageStyled as Image,
   MenuContainer,
   ParagraphLight,
+  DevNameContainer,
+  Division,
 } from "./styles";
 import Logo from "../../assets/images/logo-main.svg";
 
@@ -15,8 +17,8 @@ const Home = () => {
   return (
     <>
       <BackgroundDark />
-      <Container>
-        <Row>
+      <Container className="pt-lg-5 mt-5">
+        <Row className="pt-lg-5 mt-lg-5">
           <Col
             lg={4}
             xxl={3}
@@ -24,7 +26,7 @@ const Home = () => {
           >
             <Image src={Logo} />
           </Col>
-          <Col className="p-lg-0">
+          <Col className="pt-5 p-lg-0">
             <ParagraphLight className="text-center d-lg-none">
               seja bem vindo(a) ao meu
             </ParagraphLight>
@@ -38,27 +40,20 @@ const Home = () => {
             </Heading1>
           </Col>
         </Row>
-        <Row>
+        <Row className="pt-5 mt-5 mt-lg-0">
           <Col className="p-lg-0" lg={{ offset: 4 }} xxl={{ offset: 3 }}>
-            <hr></hr>
-            <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center">
-              <h2>
-                <Span>projetos</Span>
-              </h2>
-              <h2>sobre</h2>
-              <h2>contato</h2>
+            <Division className="d-none d-lg-flex"/>
+            <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center text-center">
+              <Link to="/projetos"><span>projetos</span></Link>
+              <Link to="/sobre">sobre</Link>
+              <Link to="/contato">contato</Link>
             </MenuContainer>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <h3>Lesliê Aparecida Oliveira</h3>
-          </Col>
-        </Row>
+        <DevNameContainer className="d-flex justify-content-center justify-content-lg-start">
+          <h3>Lesliê Aparecida Oliveira</h3>
+        </DevNameContainer>
       </Container>
-      {/* <Link to="/page2" className="App-link">
-        Next Page
-      </Link> */}
     </>
   );
 };
