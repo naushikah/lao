@@ -13,17 +13,19 @@ import Projects from "./pages/Projects";
 
 const App = () => (
   <BrowserRouter>
-    <Global />
-    <Navbar />
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/projetos" exact component={Projects} />
-      <Route path="/sobre" exact component={About} />
-      <Route path="/contato" exact component={Contact} />
-      <Route path="/404" component={NotFound} />
-      <Redirect from="*" to="/404" />
-    </Switch>
-    <Footer />
+    <main>
+      <Global />
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/projetos" exact component={Projects} />
+        <Route path="/sobre" exact component={About} />
+        <Route path="/contato" exact component={Contact} />
+        <Route path="/404" component={NotFound} />
+        <Redirect from="*" to="/404" />
+      </Switch>
+      <Footer />
+    </main>
   </BrowserRouter>
 );
 

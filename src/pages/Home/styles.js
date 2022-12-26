@@ -12,7 +12,6 @@ export const BackgroundDark = styled.div`
 
   @media (max-width: 991px) {
     width: 100%;
-    height: 50%;
   }
 `;
 
@@ -61,7 +60,7 @@ export const Span = styled.span`
 
 export const ImageStyled = styled(Image)`
   @media (max-width: 991px) {
-    width: 200px;
+    width: 125px;
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
@@ -76,12 +75,20 @@ export const MenuContainer = styled.div`
     font-size: 20px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 
     @media (min-width: 992px) {
+      color: #000000;
+
       span {
         color: #ffffff;
       }
+    }
+
+    &:hover {
+      background: linear-gradient(180.52deg, #E24E70 4.41%, #774C9E 104.61%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -100,11 +107,11 @@ export const MenuContainer = styled.div`
 
 export const DevNameContainer = styled.div`
   h3 {
-    font-size: 20px;
-    position: absolute;
-    bottom: 101px;
-    @media (min-width: 992px) {
-      right: 101px;
+    font-size: 16px;
+    color: #000000;
+
+    @media (max-width: 991px) {
+      color: #ffffff;
     }
   }
 `;
@@ -125,5 +132,9 @@ export const Division = styled.hr`
     @media (min-width: 1400px) {
       width: 33.35%;
     }
+  }
+
+  @media (max-width: 991px) {
+    background-color: #ffffff;
   }
 `;

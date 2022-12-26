@@ -17,16 +17,16 @@ const Home = () => {
   return (
     <>
       <BackgroundDark />
-      <Container className="pt-lg-5 mt-5">
-        <Row className="pt-lg-5 mt-lg-5">
+      <Container className="py-5 my-5">
+        <Row className="pt-3 pt-lg-5 mt-lg-5">
           <Col
             lg={4}
             xxl={3}
-            className="d-flex justify-content-center justify-content-lg-end p-lg-0"
+            className="d-flex justify-content-center justify-content-lg-end p-lg-0 pt-lg-5"
           >
             <Image src={Logo} />
           </Col>
-          <Col className="pt-5 p-lg-0">
+          <Col className="pt-5 pt-lg-5 p-lg-0 ">
             <ParagraphLight className="text-center d-lg-none">
               seja bem vindo(a) ao meu
             </ParagraphLight>
@@ -40,17 +40,19 @@ const Home = () => {
             </Heading1>
           </Col>
         </Row>
-        <Row className="pt-5 mt-5 mt-lg-0">
+        <Row className="py-5 mb-5">
           <Col className="p-lg-0" lg={{ offset: 4 }} xxl={{ offset: 3 }}>
-            <Division className="d-none d-lg-flex"/>
+            <Division className="d-flex" />
             <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center text-center">
-              <Link to="/projetos"><span>projetos</span></Link>
+              <Link to="/projetos">
+                <span>projetos</span>
+              </Link>
               <Link to="/sobre">sobre</Link>
               <Link to="/contato">contato</Link>
             </MenuContainer>
           </Col>
         </Row>
-        <DevNameContainer className="d-flex justify-content-center justify-content-lg-start">
+        <DevNameContainer className="pt-5 d-flex justify-content-center justify-content-lg-end">
           <h3>Lesliê Aparecida Oliveira</h3>
         </DevNameContainer>
       </Container>

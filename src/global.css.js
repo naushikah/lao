@@ -9,6 +9,9 @@ export const Global = createGlobalStyle`
 `;
 
 export const NavbarStyled = styled(Navbar)`
+  top: 0;
+  position: fixed;
+  width: 100%;
   height: 4rem;
   background-color: #f0f0f0;
 `;
