@@ -52,6 +52,10 @@ export const ParagraphLight = styled.p`
   color: #ffffff;
   font-weight: 200;
   font-size: 20px;
+
+  @media (max-width: 991px) {
+    font-size: 16px;
+  }
 `;
 
 export const Span = styled.span`
