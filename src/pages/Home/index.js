@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   BackgroundDark,
@@ -10,6 +10,7 @@ import {
   ParagraphLight,
   DevNameContainer,
   Division,
+  HomeContainer,
 } from "./styles";
 import Logo from "../../assets/images/logo-main.svg";
 
@@ -17,7 +18,7 @@ const Home = () => {
   return (
     <>
       <BackgroundDark />
-      <Container className="py-5 my-5">
+      <HomeContainer className="py-5 my-5">
         <Row className="pt-3 pt-lg-5 mt-lg-5">
           <Col
             lg={4}
@@ -45,7 +46,7 @@ const Home = () => {
             <Division className="d-flex" />
             <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center text-center">
               <Link to="/projetos">
-                <span>projetos</span>
+                <span className="light">projetos</span>
               </Link>
               <Link to="/sobre">sobre</Link>
               <Link to="/contato">contato</Link>
@@ -55,7 +56,7 @@ const Home = () => {
         <DevNameContainer className="pt-5 d-flex justify-content-center justify-content-lg-end">
           <h3>Lesliê Aparecida Oliveira</h3>
         </DevNameContainer>
-      </Container>
+      </HomeContainer>
     </>
   );
 };

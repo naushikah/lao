@@ -1,5 +1,21 @@
-import { Image } from "react-bootstrap";
-import styled from "styled-components";
+import { Container, Image } from "react-bootstrap";
+import styled, { keyframes } from "styled-components";
+
+const animation = keyframes`
+  0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+`;
+
+export const HomeContainer = styled(Container)`
+  opacity: 1;
+	animation-name: ${animation};
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+`;
 
 export const BackgroundDark = styled.div`
   background-color: #000000;
@@ -76,23 +92,30 @@ export const MenuContainer = styled.div`
   gap: 1rem;
 
   a {
+    flex: 1;
     font-size: 20px;
     letter-spacing: 1px;
     text-decoration: none;
     color: #ffffff;
+    background: linear-gradient(180deg, #e24e70 4.41%, #774c9e 104.61%);
+    background-clip: text;
+    -webkit-background-clip: text;
 
     @media (min-width: 992px) {
       color: #000000;
 
-      span {
+      .light {
         color: #ffffff;
       }
     }
+    
+    &, .light {
+      transition: color 0.5s ease-in-out;
+    }
 
-    &:hover {
-      background: linear-gradient(180.52deg, #E24E70 4.41%, #774C9E 104.61%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+    &:hover, &:focus, .light:hover, .light:focus {
+      color: rgba(0, 0, 0, 0);
     }
   }
 
@@ -130,7 +153,7 @@ export const Division = styled.hr`
   &::after {
     width: 25.1%;
     height: 1px;
-    content: '';
+    content: "";
     border: 1px solid #ffffff;
 
     @media (min-width: 1400px) {
