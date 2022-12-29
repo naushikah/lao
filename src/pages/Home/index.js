@@ -1,5 +1,4 @@
 import { Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import {
   BackgroundDark,
   WelcomeContainer,
@@ -12,7 +11,7 @@ import {
   Division,
   HomeContainer,
 } from "./styles";
-import Logo from "../../assets/images/logo-main.svg";
+import { LogoMain } from "../../assets/images";
 
 const Home = () => {
   return (
@@ -25,7 +24,7 @@ const Home = () => {
             xxl={3}
             className="d-flex justify-content-center justify-content-lg-end p-lg-0 pt-lg-5"
           >
-            <Image src={Logo} />
+            <Image src={LogoMain} />
           </Col>
           <Col className="pt-5 pt-lg-5 p-lg-0 ">
             <ParagraphLight className="text-center d-lg-none">
@@ -45,11 +44,11 @@ const Home = () => {
           <Col className="p-lg-0" lg={{ offset: 4 }} xxl={{ offset: 3 }}>
             <Division className="d-flex" />
             <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center text-center">
-              <Link to="/projetos">
+              <a href="/projetos">
                 <span className="light">projetos</span>
-              </Link>
-              <Link to="/sobre">sobre</Link>
-              <Link to="/contato">contato</Link>
+              </a>
+              <a href="/sobre">sobre</a>
+              <a href="/contato">contato</a>
             </MenuContainer>
           </Col>
         </Row>

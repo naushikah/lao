@@ -12,7 +12,7 @@ const animation = keyframes`
 
 export const HomeContainer = styled(Container)`
   opacity: 1;
-	animation-name: ${animation};
+  animation-name: ${animation};
   animation-timing-function: ease-in;
   animation-duration: 3s;
 `;
@@ -108,13 +108,16 @@ export const MenuContainer = styled.div`
         color: #ffffff;
       }
     }
-    
-    &, .light {
+
+    &,
+    .light {
       transition: color 0.5s ease-in-out;
     }
 
-
-    &:hover, &:focus, .light:hover, .light:focus {
+    &:hover,
+    &:focus,
+    .light:hover,
+    .light:focus {
       color: rgba(0, 0, 0, 0);
     }
   }

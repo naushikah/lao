@@ -1,15 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import {
-  Global,
-  NavbarStyled as Navbar,
-  FooterStyled as Footer,
-} from "./global.css";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import Projects from "./pages/Projects";
+import { Navbar } from "./components";
+import { Global, FooterStyled as Footer } from "./global.css";
+import { About, Contact, Home, NotFound, Projects } from "./pages";
 
 const App = () => (
   <BrowserRouter>
