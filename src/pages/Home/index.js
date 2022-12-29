@@ -12,6 +12,7 @@ import {
   HomeContainer,
 } from "./styles";
 import { LogoMain } from "../../assets/images";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
