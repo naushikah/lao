@@ -1,3 +1,4 @@
+import { Navbar } from "react-bootstrap";
 import styled, { createGlobalStyle } from "styled-components";
 
 export const Global = createGlobalStyle`
@@ -14,4 +15,13 @@ export const FooterStyled = styled.footer`
   background-color: #f0f0f0;
   position: fixed;
   bottom: 0;
+`;
+
+export const NavbarStyled = styled(Navbar)`
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  background-color: #f0f0f0;
 `;

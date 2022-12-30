@@ -9,8 +9,6 @@ import {
 const Navbar = () => {
   const pathname = window.location.pathname;
 
-  console.log(`pathname: ${pathname}`);
-
   return (
     <NavbarStyled>
       <NavbarContainer
