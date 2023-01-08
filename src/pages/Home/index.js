@@ -45,11 +45,6 @@ const Home = () => {
           <Col className="p-lg-0" lg={{ offset: 4 }} xxl={{ offset: 3 }}>
             <Division className="d-flex" />
             <MenuContainer className="d-flex flex-column flex-sm-row justify-content-center text-center">
-              {/* <a href="/projetos">
-                <span className="light">projetos</span>
-              </a>
-              <a href="/sobre">sobre</a>
-              <a href="/contato">contato</a> */}
               <Link to={"/projetos"}>
                 <span className="light">projetos</span>
               </Link>

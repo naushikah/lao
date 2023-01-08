@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { LogoSmall } from "../../assets/images";
 import {
   NavbarStyled,
@@ -7,8 +8,8 @@ import {
 } from "./styles";
 
 const Navbar = () => {
-  const pathname = window.location.pathname;
-
+  const pathname = useLocation().pathname;
+  
   return (
     <NavbarStyled>
       <NavbarContainer

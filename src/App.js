@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Global, FooterStyled as Footer, NavbarStyled as Navbar } from "./global.css";
+import { Global, FooterStyled as Footer } from "./global.css";
 import { About, Contact, Home, Projects } from "./pages";
+import { Navbar } from "./components";
 
 const App = () => (
   <BrowserRouter>
