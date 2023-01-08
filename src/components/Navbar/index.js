@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LogoSmall } from "../../assets/images";
 import {
   NavbarStyled,
@@ -19,25 +19,25 @@ const Navbar = () => {
           <Image src={LogoSmall} />
         </NavbarStyled.Brand>
         <Nav>
-          <Nav.Link href="/">início</Nav.Link>
-          <Nav.Link
-            href="/projetos"
+          <Link to="/">início</Link>
+          <Link
+            to="/projetos"
             className={`${pathname === "/projetos" && "active"}`}
           >
             projetos
-          </Nav.Link>
-          <Nav.Link
-            href="/sobre"
+          </Link>
+          <Link
+            to="/sobre"
             className={`${pathname === "/sobre" && "active"}`}
           >
             sobre
-          </Nav.Link>
-          <Nav.Link
-            href="/contato"
+          </Link>
+          <Link
+            to="/contato"
             className={`${pathname === "/contato" && "active"}`}
           >
             contato
-          </Nav.Link>
+          </Link>
         </Nav>
       </NavbarContainer>
     </NavbarStyled>

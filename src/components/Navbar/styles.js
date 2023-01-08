@@ -27,13 +27,14 @@ export const NavbarStyled = styled(Navbar)`
 `;
 
 export const NavStyled = styled(Nav)`
-  font-size: 20px;
   gap: 40px;
 
-  & .nav-link {
+  & a {
+    font-size: 20px;
     padding: 0px !important;
     display: inline-block;
     position: relative;
+    text-decoration: none;
     color: #000000;
 
     &.active {
