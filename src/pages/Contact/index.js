@@ -1,22 +1,37 @@
 import { Col, Row } from "react-bootstrap";
-// import { Link } from "react-router-dom";
 import {
   NetworksIcon,
   SubHeaderDark,
   RowStyled,
   ContactContainer as Container,
+  ContactPage
 } from "./styles";
 import { Email, Github, Linkedin } from "../../assets/icons";
 
 const Contact = () => {
   const icons = [
-    { name: "E-mail", icon: Email, info: "leslieapoliveira@gmail.com" },
-    { name: "Linkedin", icon: Linkedin, info: "Lesliê Oliveira" },
-    { name: "Github", icon: Github, info: "@Naushikah" },
+    {
+      name: "E-mail",
+      icon: Email,
+      info: "leslieapoliveira@gmail.com",
+      href: `mailto:leslieapoliveira@gmail.com`,
+    },
+    {
+      name: "Linkedin",
+      icon: Linkedin,
+      info: "Lesliê Oliveira",
+      href: "https://www.linkedin.com/in/leslie-aparecida-oliveira/",
+    },
+    {
+      name: "Github",
+      icon: Github,
+      info: "@Naushikah",
+      href: "https://github.com/naushikah",
+    },
   ];
 
   return (
-    <>
+    <ContactPage>
       <SubHeaderDark />
       <Container>
         <Row className="mb-5 pb-3">
@@ -25,21 +40,22 @@ const Contact = () => {
           </Col>
         </Row>
         <RowStyled className="justify-content-center text-center">
-          {icons.map(({ name, icon, info }) => (
+          {icons.map(({ name, icon, info, href }) => (
             <Col
               key={name}
-              lg={2}
-              className={"d-flex align-items-center flex-column mb-5 pb-3"}
+              md={2}
+              className={"d-flex align-items-center flex-column mb-lg-5 pb-3"}
             >
               <NetworksIcon className={"mb-3"} image={icon} />
               <h2>{name}</h2>
-              <h3>{info}</h3>
+              <a href={href} target="_blank" rel="noreferrer">
+                <h3>{info}</h3>
+              </a>
             </Col>
           ))}
         </RowStyled>
-        {/* <Link to="/">Home</Link> */}
       </Container>
-    </>
+    </ContactPage>
   );
 };
 
