@@ -1,11 +1,18 @@
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { CarouselMousewheel } from "../../components";
+import Profile from "./Profile";
 
 const About = () => {
+  const components = [{ name: "Profile", component: <Profile /> }];
+
   return (
-    <Container style={{marginTop: '150px'}}>
-      <Link to="/">Home</Link>
-    </Container>
+    <>
+      <Container style={{ marginTop: "80px" }}>
+        {/* <Link to="/">Home</Link> */}
+      </Container>
+      <CarouselMousewheel slides={components} />
+    </>
   );
 };
 
