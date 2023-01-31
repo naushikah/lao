@@ -1,6 +1,7 @@
+import { Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-export const ProfileContainer = styled.div`
+export const DarkBackground = styled.div`
   height: 100vh;
   width: 50vw;
   background-color: #000;
@@ -9,6 +10,11 @@ export const ProfileContainer = styled.div`
   z-index: -1;
 `;
 
-export const Image = styled.img`
+export const ContainerStyled = styled(Container)``;
 
+export const Image = styled.img``;
+
+export const RowStyled = styled(Row)`
+  height: 80vh;
+  align-items: center;
 `;

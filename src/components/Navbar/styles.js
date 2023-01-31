@@ -18,7 +18,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavbarStyled = styled(Navbar)`
-  z-index: 1;
+  z-index: 2;
   top: 0;
   position: fixed;
   width: 100%;

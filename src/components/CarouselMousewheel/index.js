@@ -14,9 +14,8 @@ const CarouselMousewheel = ({ slides }) => {
         clickable: true,
       }}
       modules={[Mousewheel, Pagination]}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-      style={{zIndex: -1, height:"90vh"}}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.name}>{slide.component}</SwiperSlide>

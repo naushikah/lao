@@ -1,18 +1,32 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { ProfileContainer } from "./styles";
-import { Image } from "./styles";
+import { Col } from "react-bootstrap";
+import {
+  Image,
+  RowStyled as Row,
+  ContainerStyled as Container,
+  DarkBackground,
+} from "./styles";
 import { Profile as ProfileIcon } from "../../../assets/icons";
+import { Content } from "../../../components";
 
 const Profile = () => {
+  const subtitles = [
+    {
+      title: "Olá",
+    },
+    { title: "Meu nome é" },
+  ];
+
   return (
     <>
-      <Container>
+      <Container style={{ height: "90vh" }}>
+        <DarkBackground />
         <Row>
-          <Col>
-            <ProfileContainer />
+          <Col lg={{ span: 4, offset: 2 }}>
             <Image src={ProfileIcon} />
           </Col>
-          <Col></Col>
+          <Col>
+            <Content subtitles={subtitles} />
+          </Col>
         </Row>
       </Container>
     </>
