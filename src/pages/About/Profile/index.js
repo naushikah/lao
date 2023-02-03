@@ -9,23 +9,27 @@ import { Profile as ProfileIcon } from "../../../assets/icons";
 import { Content } from "../../../components";
 
 const Profile = () => {
-  const subtitles = [
-    {
-      title: "Olá",
-    },
-    { title: "Meu nome é" },
-  ];
+  const data = {
+    primary: "Lesliê",
+    secondary: "Aparecida Oliveira",
+    subtitles: [
+      {
+        title: "Olá",
+      },
+      { title: "Meu nome é" },
+    ],
+  };
 
   return (
     <>
-      <Container style={{ height: "90vh" }}>
+      <Container>
         <DarkBackground />
         <Row>
-          <Col lg={{ span: 4, offset: 2 }}>
+          <Col sm={7} lg={{ span: 5, offset: 2 }}>
             <Image src={ProfileIcon} />
           </Col>
           <Col>
-            <Content subtitles={subtitles} />
+            <Content data={data} />
           </Col>
         </Row>
       </Container>

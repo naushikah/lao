@@ -1,5 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+import { maxWidth } from "../../variables.css";
 
 const animation = keyframes`
   0% {
@@ -16,7 +17,7 @@ export const ContactPage = styled.div`
   animation-timing-function: ease-in;
   animation-duration: 3s;
 
-  @media (max-width: 767px) {
+  @media ${maxWidth.md} {
     background-color: #000000;
   }
 `;
@@ -28,7 +29,7 @@ export const SubHeaderDark = styled.div`
   width: 100%;
   z-index: -1;
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     min-height: 590px;
   }
 `;
@@ -42,7 +43,7 @@ export const ContactContainer = styled(Container)`
     text-align: center;
     color: #ffffff;
 
-    @media (max-width: 575px) {
+    @media ${maxWidth.sm} {
       font-size: 50px;
     }
   }
@@ -53,7 +54,7 @@ export const ContactContainer = styled(Container)`
     color: #f0f0f0;
     margin-bottom: 94px;
 
-    @media (max-width: 767px) {
+    @media ${maxWidth.md} {
       margin-bottom: 15px;
     }
   }
@@ -77,13 +78,13 @@ export const ContactContainer = styled(Container)`
         color: rgba(0, 0, 0, 0);
       }
 
-      @media (max-width: 767px) {
+      @media ${maxWidth.md} {
         color: #ffffff;
       }
     }
   }
 
-  @media (max-width: 767px) {
+  @media ${maxWidth.md} {
     padding-top: 150px;
     padding-bottom: 50px;
   }
@@ -99,7 +100,7 @@ export const NetworksIcon = styled.div`
   height: 180px;
   width: 180px;
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     background-size: 50px;
     height: 100px;
     width: 100px;

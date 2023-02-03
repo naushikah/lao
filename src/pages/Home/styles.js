@@ -1,5 +1,6 @@
 import { Container, Image } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+import { maxWidth, minWidth } from "../../variables.css";
 
 const animation = keyframes`
   0% {
@@ -26,7 +27,7 @@ export const BackgroundDark = styled.div`
   height: 100%;
   z-index: -1;
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     width: 100%;
   }
 `;
@@ -45,21 +46,21 @@ export const Heading1 = styled.h1`
   color: #000000;
   letter-spacing: 5px;
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     color: #ffffff;
     text-align: center;
     font-size: 50px;
   }
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media ${minWidth.lg} and ${maxWidth.xl} {
     font-size: 69px !important;
   }
 
-  @media (min-width: 1200px) and (max-width: 1399px) {
+  @media ${minWidth.xl} and ${maxWidth.xxl} {
     font-size: 84px;
   }
 
-  @media (min-width: 1400px) {
+  @media ${minWidth.xxl} {
     font-size: 152px;
   }
 `;
@@ -69,7 +70,7 @@ export const ParagraphLight = styled.p`
   font-weight: 200;
   font-size: 20px;
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     font-size: 16px;
   }
 `;
@@ -79,11 +80,11 @@ export const Span = styled.span`
 `;
 
 export const ImageStyled = styled(Image)`
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     width: 125px;
   }
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media ${minWidth.lg} and ${maxWidth.xl} {
     width: 300px;
   }
 `;
@@ -101,7 +102,7 @@ export const MenuContainer = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
 
-    @media (min-width: 992px) {
+    @media ${minWidth.lg} {
       color: #000000;
 
       .light {
@@ -122,15 +123,15 @@ export const MenuContainer = styled.div`
     }
   }
 
-  @media (min-width: 576px) and (max-width: 991px) {
+  @media ${minWidth.sm} and ${maxWidth.lg} {
     gap: 5rem;
   }
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media ${minWidth.lg} and ${maxWidth.xl} {
     gap: 9rem;
   }
 
-  @media (min-width: 1200px) {
+  @media ${minWidth.xl} {
     gap: 11rem;
   }
 `;
@@ -140,7 +141,7 @@ export const DevNameContainer = styled.div`
     font-size: 16px;
     color: #000000;
 
-    @media (max-width: 991px) {
+    @media ${maxWidth.lg} {
       color: #ffffff;
     }
   }
@@ -159,12 +160,12 @@ export const Division = styled.hr`
     content: "";
     border: 1px solid #ffffff;
 
-    @media (min-width: 1400px) {
+    @media ${minWidth.xxl} {
       width: 33.35%;
     }
   }
 
-  @media (max-width: 991px) {
+  @media ${maxWidth.lg} {
     background-color: #ffffff;
   }
 `;

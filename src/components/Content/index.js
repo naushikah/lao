@@ -1,12 +1,22 @@
-import { Paragraph } from "./styles";
+import {
+  FullNameContainer,
+  HeadingLastName,
+  HeadingName,
+  Paragraph,
+} from "./styles";
 
-const Content = ({ subtitles }) => {
+const Content = ({ data }) => {
+  const { primary, secondary, subtitles } = data;
 
   return (
     <>
       {subtitles.map(({ title }) => (
         <Paragraph key={title}>{title}</Paragraph>
       ))}
+      <FullNameContainer>
+        <HeadingName>{primary}</HeadingName>
+        <HeadingLastName>{secondary}</HeadingLastName>
+      </FullNameContainer>
     </>
   );
 };
