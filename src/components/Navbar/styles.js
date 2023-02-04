@@ -1,5 +1,6 @@
 import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
+import { color } from "../../variables.css";
 
 const animation = keyframes`
   0% {
@@ -23,7 +24,7 @@ export const NavbarStyled = styled(Navbar)`
   position: fixed;
   width: 100%;
   height: 5rem;
-  background-color: #f0f0f0;
+  background-color: ${color.gray};
 `;
 
 export const NavStyled = styled(Nav)`
@@ -35,7 +36,7 @@ export const NavStyled = styled(Nav)`
     display: inline-block;
     position: relative;
     text-decoration: none;
-    color: #000000;
+    color: ${color.black};
 
     &.active {
       text-decoration: underline;
@@ -51,7 +52,7 @@ export const NavStyled = styled(Nav)`
       height: 1px;
       bottom: -8px;
       left: 0;
-      background-color: #000000;
+      background-color: ${color.black};
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
     }

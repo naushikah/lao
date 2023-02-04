@@ -1,6 +1,6 @@
 import { Container, Image } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import { maxWidth, minWidth } from "../../variables.css";
+import { color, maxWidth, minWidth } from "../../variables.css";
 
 const animation = keyframes`
   0% {
@@ -19,7 +19,7 @@ export const HomeContainer = styled(Container)`
 `;
 
 export const BackgroundDark = styled.div`
-  background-color: #000000;
+  background-color: ${color.black};
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@ export const BackgroundDark = styled.div`
 export const WelcomeContainer = styled.div`
   font-size: 20px;
   font-weight: 300;
-  color: #ffffff;
+  color: ${color.white};
 
   p {
     margin: 0;
@@ -43,11 +43,11 @@ export const WelcomeContainer = styled.div`
 `;
 
 export const Heading1 = styled.h1`
-  color: #000000;
+  color: ${color.black};
   letter-spacing: 5px;
 
   @media ${maxWidth.lg} {
-    color: #ffffff;
+    color: ${color.white};
     text-align: center;
     font-size: 50px;
   }
@@ -66,7 +66,7 @@ export const Heading1 = styled.h1`
 `;
 
 export const ParagraphLight = styled.p`
-  color: #ffffff;
+  color: ${color.white};
   font-weight: 200;
   font-size: 20px;
 
@@ -76,7 +76,7 @@ export const ParagraphLight = styled.p`
 `;
 
 export const Span = styled.span`
-  color: #ffffff;
+  color: ${color.white};
 `;
 
 export const ImageStyled = styled(Image)`
@@ -97,16 +97,16 @@ export const MenuContainer = styled.div`
     font-size: 20px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #ffffff;
-    background: linear-gradient(180deg, #e24e70 4.41%, #774c9e 104.61%);
+    color: ${color.white};
+    background: ${color.pinkPurple};
     background-clip: text;
     -webkit-background-clip: text;
 
     @media ${minWidth.lg} {
-      color: #000000;
+      color: ${color.black};
 
       .light {
-        color: #ffffff;
+        color: ${color.white};
       }
     }
 
@@ -119,7 +119,7 @@ export const MenuContainer = styled.div`
     &:focus,
     .light:hover,
     .light:focus {
-      color: rgba(0, 0, 0, 0);
+      color: transparent;
     }
   }
 
@@ -139,16 +139,16 @@ export const MenuContainer = styled.div`
 export const DevNameContainer = styled.div`
   h3 {
     font-size: 16px;
-    color: #000000;
+    color: ${color.black};
 
     @media ${maxWidth.lg} {
-      color: #ffffff;
+      color: ${color.white};
     }
   }
 `;
 
 export const Division = styled.hr`
-  background-color: #000000;
+  background-color: ${color.black};
   height: 1px;
   border: 0;
   opacity: 1;
@@ -158,7 +158,7 @@ export const Division = styled.hr`
     width: 25.1%;
     height: 1px;
     content: "";
-    border: 1px solid #ffffff;
+    border: 1px solid ${color.white};
 
     @media ${minWidth.xxl} {
       width: 33.35%;
@@ -166,6 +166,6 @@ export const Division = styled.hr`
   }
 
   @media ${maxWidth.lg} {
-    background-color: #ffffff;
+    background-color: ${color.white};
   }
 `;

@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import styled, { keyframes } from "styled-components";
-import { maxWidth } from "../../variables.css";
+import { color, maxWidth } from "../../variables.css";
 
 const animation = keyframes`
   0% {
@@ -18,12 +18,12 @@ export const ContactPage = styled.div`
   animation-duration: 3s;
 
   @media ${maxWidth.md} {
-    background-color: #000000;
+    background-color: ${color.black};
   }
 `;
 
 export const SubHeaderDark = styled.div`
-  background-color: #000000;
+  background-color: ${color.black};
   min-height: 670px;
   position: absolute;
   width: 100%;
@@ -41,7 +41,7 @@ export const ContactContainer = styled(Container)`
   & h1 {
     font-size: 80px;
     text-align: center;
-    color: #ffffff;
+    color: ${color.white};
 
     @media ${maxWidth.sm} {
       font-size: 50px;
@@ -51,7 +51,7 @@ export const ContactContainer = styled(Container)`
   & h2 {
     font-size: 20px;
     font-weight: bold;
-    color: #f0f0f0;
+    color: ${color.gray};
     margin-bottom: 94px;
 
     @media ${maxWidth.md} {
@@ -64,8 +64,8 @@ export const ContactContainer = styled(Container)`
 
     & h3 {
       font-size: 16px;
-      color: #000000;
-      background: linear-gradient(180deg, #e24e70 4.41%, #774c9e 104.61%);
+      color: ${color.black};
+      background: ${color.pinkPurple};
       background-clip: text;
       -webkit-background-clip: text;
 
@@ -75,11 +75,11 @@ export const ContactContainer = styled(Container)`
 
       &:hover,
       &:focus {
-        color: rgba(0, 0, 0, 0);
+        color: transparent;
       }
 
       @media ${maxWidth.md} {
-        color: #ffffff;
+        color: ${color.white};
       }
     }
   }
@@ -94,7 +94,7 @@ export const NetworksIcon = styled.div`
   ${({ image }) => image && `background-image: url(${image});`}
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f0f0f0;
+  background-color: ${color.gray};
   background-size: 100px;
   border-radius: 100%;
   height: 180px;
@@ -110,7 +110,7 @@ export const NetworksIcon = styled.div`
 export const RowStyled = styled(Row)`
   gap: 111px;
 
-  @media (max-width: 767px) {
+  @media ${maxWidth.md} {
     gap: 30px;
   }
 `;

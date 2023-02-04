@@ -1,11 +1,11 @@
 import { Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { maxWidth } from "../../../variables.css";
+import { color, maxWidth } from "../../../variables.css";
 
 export const DarkBackground = styled.div`
   height: 100vh;
   width: 50vw;
-  background-color: #000;
+  background-color: ${color.black};
   position: absolute;
   left: 0;
   z-index: -1;
