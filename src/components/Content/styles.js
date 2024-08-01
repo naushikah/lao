@@ -11,7 +11,17 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const FullNameContainer = styled.div``;
+export const ParagraphGray = styled.p`
+  color: ${color.gray};
+  font-size: 16px;
+  font-weight: 300;
+`;
+
+export const FullNameContainer = styled.div`
+  border-bottom: 1px solid;
+  padding-bottom: 1rem;
+  margin-bottom: 60px;
+`;
 
 export const HeadingName = styled.h1`
   background: ${color.pinkPurple};
@@ -19,6 +29,7 @@ export const HeadingName = styled.h1`
   -webkit-text-fill-color: transparent;
   font-size: 100px;
   letter-spacing: 0.07em;
+  margin-bottom: 0px;
 `;
 
 export const HeadingLastName = styled.h2`
@@ -29,3 +40,5 @@ export const HeadingLastName = styled.h2`
   -webkit-text-fill-color: transparent;
   font-size: 40px;
 `;
+
+export const ContentContainer = styled.div``;

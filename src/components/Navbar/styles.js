@@ -24,7 +24,7 @@ export const NavbarStyled = styled(Navbar)`
   position: fixed;
   width: 100%;
   height: 5rem;
-  background-color: ${color.gray};
+  background-color: ${color.grayLight};
 `;
 
 export const NavStyled = styled(Nav)`

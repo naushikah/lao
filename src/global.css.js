@@ -5,7 +5,7 @@ import { color } from "./variables.css";
 export const Global = createGlobalStyle`
   body {
     font-family: Poppins, Sans-Serif;
-    background-color: ${color.gray};
+    background-color: ${color.grayLight};
   }
 `;
 
@@ -13,7 +13,7 @@ export const FooterStyled = styled.footer`
   z-index: 1;
   height: 5rem;
   width: 100%;
-  background-color: ${color.gray};
+  background-color: ${color.grayLight};
   position: fixed;
   bottom: 0;
 `;

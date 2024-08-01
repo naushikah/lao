@@ -22,10 +22,10 @@ export const maxWidth = {
   xxl: `(max-width: ${breakpoints.xxl - 1}px)`,
 };
 
-
 export const color = {
   black: "#000000",
-  gray: "#f0f0f0",
+  gray: "#6F6F6F",
+  grayLight: "#f0f0f0",
   white: "#ffffff",
   pinkPurple: "linear-gradient(180deg, #e24e70 4.41%, #774c9e 104.61%)",
-}
+};

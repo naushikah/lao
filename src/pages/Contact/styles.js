@@ -51,7 +51,7 @@ export const ContactContainer = styled(Container)`
   & h2 {
     font-size: 20px;
     font-weight: bold;
-    color: ${color.gray};
+    color: ${color.grayLight};
     margin-bottom: 94px;
 
     @media ${maxWidth.md} {
@@ -94,7 +94,7 @@ export const NetworksIcon = styled.div`
   ${({ image }) => image && `background-image: url(${image});`}
   background-repeat: no-repeat;
   background-position: center;
-  background-color: ${color.gray};
+  background-color: ${color.grayLight};
   background-size: 100px;
   border-radius: 100%;
   height: 180px;

@@ -20,7 +20,7 @@ const CarouselMousewheel = ({ slides }) => {
       {slides.map((slide) => (
         <SwiperSlide key={slide.name}>{slide.component}</SwiperSlide>
       ))}
-      <SwiperSlide>Slide 2</SwiperSlide>
+      {/* <SwiperSlide>Slide 2</SwiperSlide> */}
     </Swiper>
   );
 };
